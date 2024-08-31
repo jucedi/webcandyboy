@@ -1,0 +1,167 @@
+/* Paleta de colores de CandyBoy */
+:root {
+    --primary-color: #1600c9;   /* Azul */
+    --secondary-color: #6400c5;  /* Morado */
+    --accent-color: #fff100;     /* Amarillo */
+    --text-color: #000000;       /* Negro */
+    --background-color: #ffffff;  /* Blanco */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color); 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header y Navbar */
+header {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar {
+    background-color: #f0f0f0; /* Gris claro */
+    padding: 15px 0; /* Espacio interno */
+    text-align: center; /* Centra el menú */
+  }
+  
+  .navbar ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline; /* Coloca los elementos en línea */
+    margin: 0 20px; /* Espacio entre elementos */
+  }
+  
+  .navbar a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #007bff; /* Azul profundo */
+    font-family: 'Comic Sans MS', cursive; /* Fuente divertida */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: color 0.3s ease; /* Transición suave al cambiar de color */
+  }
+  
+  .navbar a:hover {
+    color: #0056b3; /* Azul más oscuro al pasar el cursor */
+  }
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color); 
+}
+
+.logo-letter {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Botones en el header */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Hero */
+.hero {
+    background-color: var(--secondary-color); 
+    text-align: center;
+    padding: 100px 0;
+    color: var(--background-color); 
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Secciones */
+.seccion {
+    padding: 50px 0;
+}
+
+.seccion h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color); 
+    text-align: center;
+    padding: 20px 0;
+    color: var(--background-color); 
+}
+
+/* Otros estilos (puedes agregar más según tus necesidades) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    /* Estilos para cada producto en la cuadrícula */
+}
+
+.blog-posts {
+    /* Estilos para la sección del blog */
+}
+
+/* ... y así sucesivamente */
