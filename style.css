@@ -29,33 +29,34 @@ header {
 }
 
 .navbar {
-    background-color: #f0f0f0; /* Gris claro */
-    padding: 15px 0; /* Espacio interno */
-    text-align: center; /* Centra el menú */
-  }
-  
-  .navbar ul {
-    list-style: none; /* Elimina los puntos de la lista */
+    background-color: #f0f0f0; 
+    padding: 15px 0; 
+    text-align: center; 
+}
+
+.navbar ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar li {
-    display: inline; /* Coloca los elementos en línea */
-    margin: 0 20px; /* Espacio entre elementos */
-  }
-  
-  .navbar a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #007bff; /* Azul profundo */
-    font-family: 'Comic Sans MS', cursive; /* Fuente divertida */
-    font-size: 18px; /* Tamaño de fuente */
-    transition: color 0.3s ease; /* Transición suave al cambiar de color */
-  }
-  
-  .navbar a:hover {
-    color: #0056b3; /* Azul más oscuro al pasar el cursor */
-  }
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.navbar li {
+    margin: 0 20px; 
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: #007bff; 
+    font-family: 'Comic Sans MS', cursive; 
+    font-size: 18px; 
+    transition: color 0.3s ease; 
+}
+
+.navbar a:hover {
+    color: #0056b3; 
+}
 
 .logo {
     font-size: 1.8em;
@@ -68,29 +69,7 @@ header {
     color: var(--accent-color);
 }
 
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
-    transition: color 0.3s ease; 
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-/* Botones en el header */
+/* Botones */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -141,68 +120,33 @@ header {
     margin-bottom: 30px;
 }
 
-/* Footer */
-footer {
-    background-color: var(--secondary-color); 
-    text-align: center;
-    padding: 20px 0;
-    color: var(--background-color); 
+.seccion-content {
+    /* Contenido de las secciones */
 }
 
-/* Otros estilos (puedes agregar más según tus necesidades) */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.product {
-    /* Estilos para cada producto en la cuadrícula */
-}
-
-.blog-posts {
-    /* Estilos para la sección del blog */
-}
-
-/* ... y así sucesivamente */
-/* Estilos específicos para la sección "Quiénes Somos" */
-#quienes-somos {
-    background-color: var(--background-color); /* Fondo blanco */
-    color: var(--text-color); /* Texto negro */
-}
-
-#quienes-somos h2 {
-    color: var(--primary-color); /* Título en azul */
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
+/* Quiénes Somos */
 #quienes-somos h3 {
-    color: var(--secondary-color); /* Subtítulos en morado */
+    color: var(--secondary-color); 
     font-size: 1.8em;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
 #quienes-somos p {
-    line-height: 1.6; /* Espacio entre líneas */
+    line-height: 1.6; 
     margin-bottom: 20px;
 }
 
 #quienes-somos ul {
-    list-style: disc; /* Viñetas */
+    list-style: disc; 
     padding-left: 20px;
     margin-bottom: 30px;
 }
 
-/* Puedes agregar más estilos específicos para imágenes, testimonios, llamados a la acción, etc. */
-/* ... (Estilos anteriores) ... */
-
 /* Servicios */
 .servicios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta según el número de servicios */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -233,9 +177,8 @@ footer {
 
 .servicio p {
     font-size: 1em;
-    color: #666; /* Gris más claro para la descripción */
+    color: #666; 
 }
-/* ... (Estilos anteriores) ... */
 
 /* Galería */
 .galeria-grid {
@@ -245,32 +188,31 @@ footer {
 }
 
 .imagen {
-    overflow: hidden; /* Para que la imagen no se salga del contenedor */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .imagen img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Para que la imagen cubra todo el contenedor manteniendo la relación de aspecto */
-    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
 }
 
 .imagen:hover img {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    transform: scale(1.1); 
 }
-/* ... (Estilos anteriores) ... */
 
 /* Contacto */
 .contacto-contenido {
     display: flex;
-    justify-content: space-around; /* Distribuye el contenido horizontalmente */
-    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    justify-content: space-around; 
+    align-items: flex-start; 
 }
 
 .formulario, .info-contacto {
-    width: 45%; /* Ajusta el ancho según tus necesidades */
+    width: 45%; 
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -293,10 +235,6 @@ footer {
     border-radius: 5px;
 }
 
-.btn {
-    /* ... (Estilos del botón definidos anteriormente) ... */
-}
-
 .info-contacto h3 {
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -306,36 +244,10 @@ footer {
     margin-bottom: 10px;
 }
 
-/* ... (Puedes agregar estilos para el mapa si lo necesitas) ... */
-/* Estilos generales */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin-right: 20px;
-}
-
-main {
-    padding: 20px;
-}
-
+/* Footer */
 footer {
-    background-color: #f0f0f0;
+    background-color: var(--secondary-color); 
     text-align: center;
-    padding: 10px;
+    padding: 20px 0;
+    color: var(--background-color); 
 }
