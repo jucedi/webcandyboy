@@ -1,71 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="inicio.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CandyBoy - Moda Infantil con Estilo y Comodidad</title>
+    <title>CandyBoy</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="quienes-somos.css">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
 </head>
 <body>
-
-    <header>
-        <nav class="navbar"> 
-            <div class="container">
-                <a href="index.html" class="logo"> 
-                    <img src="img/logo.png" alt="CandyBoy">
-                </a>
-                <ul class="nav-links">
-                    <li><a href="index.html">inicio</a></li>
-                    <li><a href="quienes-somos.html">Quiénes somos</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
+    <!-- Encabezado y navegación -->
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo"><img src="img/logo.png" alt="CandyBoy"></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="galeria.html">Galería</a></li>
-                    <li><a href="#contacto">Contáctenos</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+            <form class="search-form">
+                <input type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="container">
-                <h1>Bienvenido a CandyBoy</h1>
-                <h2>Moda Infantil con Estilo y Comodidad</h2>
-                <p>COLORES QUE INSPIRAN SONRISAS</p>
-            </div>
-        </section>
-
-        <section id="quienes-somos" class="seccion">
-            <div class="container">
-                <h2>Quiénes somos</h2>
-                </div>
-        </section>
-
-        <section id="servicios" class="seccion">
-            <div class="container">
-                <h2>Servicios</h2>
-                </div>
-        </section>
-
-        <section id="galeria" class="seccion">
-            <div class="container">
-                <h2>Galería</h2>
-                </div>
-        </section>
-
-        <section id="contacto" class="seccion">
-            <div class="container">
-                <h2>Contáctenos</h2>
-                </div>
-        </section>
-    </main>
-
-    <footer>
+    <!-- Slideshow de productos destacados -->
+    <section class="slideshow">
         <div class="container">
+            <div class="slide">
+                <img src="img/producto1.jpg" alt="Producto destacado 1">
+                <div class="caption">Producto destacado 1</div>
+            </div>
+            <div class="slide">
+                <img src="img/producto2.jpg" alt="Producto destacado 2">
+                <div class="caption">Producto destacado 2</div>
+            </div>
+            <!-- Añadir más slides según sea necesario -->
+        </div>
+    </section>
+
+    <!-- Catálogo de productos -->
+    <section class="catalogo">
+        <div class="container">
+            
+            <!-- Añadir productos de pijamas -->
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="redes-sociales">
+                <a href="https://facebook.com" class="fab fa-facebook-f"></a>
+                <a href="https://twitter.com" class="fab fa-twitter"></a>
+                <a href="https://instagram.com" class="fab fa-instagram"></a>
+                <a href="https://linkedin.com" class="fab fa-linkedin-in"></a>
+            </div>
             <p>&copy; 2023 CandyBoy. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="js/scripts.js"></script>
 </body>
 </html>

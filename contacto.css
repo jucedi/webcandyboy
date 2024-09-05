@@ -1,0 +1,58 @@
+/* Estilos específicos para contacto.html */
+.seccion {
+	padding: 50px 20px;
+	background-color: var(--fondo);
+	color: var(--texto);
+}
+
+.seccion h2 {
+	font-family: 'Roboto', sans-serif; 
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-align: center;
+	color: var(--primario);
+}
+
+.contacto form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.contacto label {
+	font-weight: bold;
+}
+
+.contacto input, .contacto textarea {
+	padding: 10px;
+	border: 1px solid var(--primario);
+	border-radius: 5px;
+}
+
+.contacto button {
+	padding: 10px 20px;
+	background-color: var(--primario);
+	color: var(--secundario);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.contacto button:hover {
+	background-color: var(--accion);
+}
+
+.datos-empresa {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#mapa {
+	width: 100%;
+	height: 300px;
+	background-color: #e0e0e0;
+	margin-top: 20px;
+}
