@@ -1,0 +1,95 @@
+/* Importar estilos generales */
+@import 'style.css';
+
+/* Estilos para la sección principal */
+#quienes-somos {
+    background-color: var(--background-color); /* Fondo blanco */
+    color: var(--text-color); /* Texto en negro */
+    padding: 50px 0; /* Padding superior e inferior de 50px */
+}
+
+/* Estilos para el título principal */
+#quienes-somos h2 {
+    color: var(--primary-color); /* Título en azul */
+    text-align: center; /* Centrar el título */
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    margin-bottom: 30px; /* Margen inferior */
+}
+
+/* Estilos para las subsecciones */
+.historia, .valores, .equipo {
+    margin-bottom: 40px; /* Margen inferior */
+}
+
+/* Títulos de las subsecciones */
+.historia h3, .valores h3, .equipo h3 {
+    color: var(--secondary-color); /* Subtítulos en morado */
+    font-size: 1.8em; /* Tamaño de fuente ligeramente más pequeño */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Párrafos */
+.historia p, .valores p, .equipo p {
+    line-height: 1.6; /* Interlineado adecuado */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Lista de valores */
+.valores ul {
+    list-style: disc; /* Viñetas */
+    padding-left: 20px; /* Padding izquierdo */
+    margin-bottom: 30px; /* Margen inferior */
+}
+
+/* Estilos opcionales para imágenes */
+.equipo img {
+    max-width: 100%; /* Ajustar el tamaño de la imagen al contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    object-fit: cover; /* Ajustar la imagen al contenedor manteniendo la proporción */
+}
+
+/* Estilos opcionales para testimonios */
+.testimonio {
+    font-style: italic; /* Texto en cursiva */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.testimonio img {
+    border-radius: 50%; /* Imagen de perfil redondeada */
+    width: 50px; /* Ancho de la imagen */
+    height: 50px; /* Altura de la imagen */
+    object-fit: cover; /* Ajustar la imagen al contenedor manteniendo la proporción */
+    margin-right: 10px; /* Margen derecho */
+}
+
+/* Estilos para el llamado a la acción */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    #quienes-somos {
+        padding: 30px 0; /* Reducir el padding en pantallas pequeñas */
+    }
+
+    #quienes-somos h2 {
+        font-size: 2em; /* Reducir el tamaño de fuente del título principal */
+    }
+
+    .historia h3, .valores h3, .equipo h3 {
+        font-size: 1.5em; /* Reducir el tamaño de fuente de los subtítulos */
+    }
+}

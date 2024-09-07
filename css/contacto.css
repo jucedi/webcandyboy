@@ -1,0 +1,98 @@
+/* Importar estilos generales */
+@import 'style.css';
+
+/* Estilos para la sección principal */
+#contacto {
+    background-color: var(--background-color); /* Fondo blanco */
+    color: var(--text-color); /* Texto en negro */
+    padding: 50px 0; /* Padding superior e inferior de 50px */
+}
+
+/* Estilos para el título principal */
+#contacto h2 {
+    color: var(--primary-color); /* Título en azul */
+    text-align: center; /* Centrar el título */
+    font-size: 2.5em; /* Tamaño de fuente grande */
+    margin-bottom: 30px; /* Margen inferior */
+}
+
+/* Estilos para el contenido de contacto */
+.contacto-contenido {
+    display: flex; /* Utilizar flexbox */
+    justify-content: space-around; /* Distribuir los elementos con espacio uniforme */
+    align-items: flex-start; /* Alinear los elementos al inicio del contenedor */
+}
+
+/* Estilos para el formulario y la información de contacto */
+.formulario, .info-contacto {
+    width: 45%; /* Ancho de cada contenedor */
+    padding: 30px; /* Padding interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.form-group label {
+    display: block; /* Mostrar las etiquetas en bloque */
+    margin-bottom: 5px; /* Margen inferior */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; /* Ancho de los campos de entrada */
+    padding: 10px; /* Padding interno */
+    border: 1px solid #ccc; /* Borde delgado gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilos para el botón */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Estilos para la información de contacto */
+.info-contacto h3 {
+    color: var(--primary-color); /* Título en azul */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.info-contacto p {
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Estilos opcionales para el mapa */
+.map iframe {
+    width: 100%; /* Ancho del mapa */
+    height: 450px; /* Altura del mapa */
+    border: 0; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .contacto-contenido {
+        flex-direction: column; /* Colocar los elementos en columnas verticales */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .formulario, .info-contacto {
+        width: 100%; /* Ancho completo */
+        margin-bottom: 20px; /* Margen inferior */
+    }
+}

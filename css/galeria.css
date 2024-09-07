@@ -1,0 +1,23 @@
+/* Estilos para la galería */
+.galeria-grid {
+	display: grid; /* Establece el contenedor como una cuadrícula */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Distribuye las columnas de la cuadrícula */
+	gap: 20px; /* Espacio de 20px entre las filas y columnas */
+}
+
+.imagen {
+	overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+	border-radius: 10px; /* Bordes redondeados de 10px */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+}
+
+.imagen img {
+	width: 100%; /* Ancho de la imagen al 100% del contenedor */
+	height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+	object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+	transition: transform 0.3s ease; /* Transición suave de 0.3 segundos para el efecto de zoom */
+}
+
+.imagen:hover img {
+	transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
