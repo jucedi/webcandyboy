@@ -15,7 +15,7 @@
     <header class="header">
         <div class="container">
             <a href="/" class="logo"><img src="images/logo.png" alt="CandyBoy"></a>
-            <nav class="nav">
+            <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="galeria.html">Galería</a></li>
@@ -31,16 +31,51 @@
     </header>
     <!-- Slideshow de productos destacados -->
     <section class="slideshow">
-        <div class="container">
-            <div class="slide">
-                <img src="img/producto1.jpg" alt="Producto destacado 1">
-                <div class="caption">Producto destacado 1</div>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/1.png" alt="Producto destacado 1">
+                <div class="text">Producto destacado 1</div>
             </div>
-            <div class="slide">
-                <img src="img/producto2.jpg" alt="Producto destacado 2">
-                <div class="caption">Producto destacado 2</div>
+            <div class="mySlides fade">
+                <img src="images/2.png" alt="Producto destacado 2">
+                <div class="text">Producto destacado 2</div>
             </div>
-            <!-- Añadir más slides según sea necesario -->
+            <div class="mySlides fade">
+                <img src="images/3.png" alt="Producto destacado 3">
+                <div class="text">Producto destacado 3</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/4.png" alt="Producto destacado 4">
+                <div class="text">Producto destacado 4</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/5.png" alt="Producto destacado 5">
+                <div class="text">Producto destacado 5</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/6.png" alt="Producto destacado 6">
+                <div class="text">Producto destacado 6</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="images/7.png" alt="Producto destacado 7">
+                <div class="text">Producto destacado 7</div>
+            </div>
+    
+            <!-- Controles de navegación -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    
+        <!-- Indicadores de diapositivas -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
         </div>
     </section>
 
@@ -80,6 +115,7 @@
     </section>
 
     <!-- Enlace al archivo JavaScript -->
-    <script src="scripts/scripts.js"></script>
+    
+    <script src="js/slideshow.js"></script>
 </body>
 </html>

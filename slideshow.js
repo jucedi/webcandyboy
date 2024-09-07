@@ -7,7 +7,7 @@ const dots = document.querySelectorAll('.dot');
 function showSlides(n) {
   clearTimeout(slideshowTimeout);
 
-  if (n) {
+  if (n !== undefined) {
     slideIndex = n;
   } else {
     slideIndex++;
@@ -20,7 +20,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].classList.add('active');
 
-  slideshowTimeout = setTimeout(showSlides, 5000);
+  slideshowTimeout = setTimeout(() => showSlides(), 5000);
 }
 
 function plusSlides(n) {
@@ -37,7 +37,7 @@ slideshowContainer.addEventListener('mouseover', () => {
 });
 
 slideshowContainer.addEventListener('mouseout', () => {
-  slideshowTimeout = setTimeout(showSlides, 5000);
+  slideshowTimeout = setTimeout(() => showSlides(), 5000);
 });
 
-document.addEventListener('DOMContentLoaded', showSlides);
+document.addEventListener('DOMContentLoaded', () => showSlides(slideIndex));
