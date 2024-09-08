@@ -1,11 +1,11 @@
 /* Variables CSS */
 :root {
-    --primary-color: #1600c9; /* Nuevo color */
-    --secondary-color: #fc4b04; /* Naranja */
-    --accent-color: #ffffff; /* Blanco */
-    --text-color: #000000; /* Negro */
-    --background-color: #f5f5f5; /* Gris claro */
-    --hover-color: #ffcc00; /* Color de fondo al pasar el mouse */
+    --primary-color: #1600c9;
+    --secondary-color: #fc4b04;
+    --accent-color: #ffffff;
+    --text-color: #000000;
+    --background-color: #f5f5f5;
+    --hover-color: #ffcc00;
 }
 
 /* Estilos Generales */
@@ -30,28 +30,28 @@ body {
     padding: 10px 0;
 }
 
-.logo img {
+.header .logo img {
     max-height: 50px;
 }
 
-.navbar {
+.header .navbar {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navbar ul {
+.header .navbar ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.navbar li {
+.header .navbar li {
     margin: 0 20px;
 }
 
-.navbar a {
+.header .navbar a {
     text-decoration: none;
     color: var(--accent-color);
     font-family: 'Poppins', sans-serif;
@@ -61,7 +61,7 @@ body {
     transition: color 0.3s, background-color 0.3s;
 }
 
-.navbar a::after {
+.header .navbar a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -74,29 +74,29 @@ body {
     -webkit-transition: width 0.3s ease;
 }
 
-.navbar a:hover::after {
+.header .navbar a:hover::after {
     width: 100%;
     left: 0;
     background: var(--hover-color);
 }
 
-.navbar a:hover {
+.header .navbar a:hover {
     color: var(--hover-color);
 }
 
-.search-form {
+.header .search-form {
     display: flex;
     align-items: center;
 }
 
-.search-form input[type="search"] {
+.header .search-form input[type="search"] {
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
 }
 
-.search-form button {
+.header .search-form button {
     padding: 5px 10px;
     background-color: var(--primary-color);
     color: #ffffff;
@@ -106,41 +106,95 @@ body {
     transition: background-color 0.3s;
 }
 
-.search-form button:hover {
+.header .search-form button:hover {
     background-color: var(--secondary-color);
-}/* Estilos para el slideshow */
-.slideshow .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
-.slideshow .slide {
+/* Estilos para el slideshow */
+.slideshow .slideshow-container {
+    max-width: 1000px;
     position: relative;
-    margin: 10px;
-    max-width: 300px; /* Ajusta el tamaño máximo de las imágenes */
-    overflow: hidden;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: auto;
 }
 
-.slideshow .slide img {
-    width: 100%; /* Ajusta el ancho de las imágenes al contenedor */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    display: block;
+.slideshow .mySlides {
+    display: none;
 }
 
-.slideshow .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.slideshow .mySlides img {
     width: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    color: #ffffff; /* Color del texto */
+    border-radius: 10px;
+}
+
+.slideshow .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
     text-align: center;
-    padding: 10px;
-    font-size: 1.2em;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+}
+
+.slideshow .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+/* Controles de navegación */
+.slideshow .prev,
+.slideshow .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.slideshow .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slideshow .prev:hover,
+.slideshow .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Indicadores de diapositivas */
+.slideshow .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.slideshow .active,
+.slideshow .dot:hover {
+    background-color: #717171;
+}
+
+/* Slideshow de productos destacados */
+.slideshow {
+    margin-top: 20px;
 }
 
 /* Estilos para las secciones destacadas */
@@ -155,20 +209,20 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    gap: 20px;
 }
 
 .featured-section .grid-item {
-    max-width: 300px; /* Ajusta el tamaño máximo de los elementos de la cuadrícula */
+    max-width: 300px;
     overflow: hidden;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .featured-section .grid-item img {
-    width: 100%; /* Ajusta el ancho de las imágenes al contenedor */
-    height: auto; /* Mantiene la proporción de las imágenes */
+    width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -186,169 +240,70 @@ body {
 
 .featured-section .cta-button:hover {
     background-color: var(--secondary-color);
-}/* Estilos para el carrusel de imágenes */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 10px 10px;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-/* Controles de navegación */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Indicadores de diapositivas */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Slideshow de productos destacados */
-.slideshow {
-    margin-top: 20px;
-}
-
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 10px 10px;
-}
-
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-}
-
-/* Controles de navegación */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-/* Indicadores de diapositivas */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
 }
 
 /* Estilo responsivo */
 @media only screen and (max-width: 768px) {
-    .prev, .next, .text {font-size: 11px}
+    .slideshow .prev,
+    .slideshow .next,
+    .slideshow .text {
+        font-size: 11px
+    }
+
+    .header .navbar {
+        flex-direction: column; /* Cambia la dirección a vertical */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .header .navbar ul {
+        flex-direction: column; /* Cambia la dirección a vertical */
+        padding: 10px 0; /* Agrega un padding superior e inferior */
+    }
+
+    .header .navbar li {
+        margin: 5px 0; /* Ajusta el margen superior e inferior */
+    }
+
+    .featured-section .grid {
+        gap: 10px; /* Reduce el espacio entre los elementos */
+    }
+
+    .featured-section .grid-item {
+        max-width: 100%; /* Ajusta el ancho máximo al 100% */
+    }
 }
+
+.galeria-container {
+    display: flex;
+    overflow-x: auto; 
+    scroll-behavior: smooth; /* Desplazamiento suave */
+  }
+  
+  .galeria-item {
+    min-width: 300px; /* Ajusta el ancho mínimo de las imágenes */
+    margin-right: 20px;
+  }
+  
+  .galeria-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .banner {
+    position: relative;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff; 
+  }

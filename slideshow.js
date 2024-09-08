@@ -1,9 +1,6 @@
 let slideIndex = 1;
 let slideshowTimeout;
 
-const slides = document.querySelectorAll('.mySlides');
-const dots = document.querySelectorAll('.dot');
-
 function showSlides(n) {
   clearTimeout(slideshowTimeout);
 
@@ -31,13 +28,18 @@ function currentSlide(n) {
   showSlides(n);
 }
 
-const slideshowContainer = document.querySelector('.slideshow-container');
-slideshowContainer.addEventListener('mouseover', () => {
-  clearTimeout(slideshowTimeout);
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.mySlides');
+  const dots = document.querySelectorAll('.dot');
+  
+  const slideshowContainer = document.querySelector('.slideshow-container');
+  slideshowContainer.addEventListener('mouseover', () => {
+    clearTimeout(slideshowTimeout);
+  });
 
-slideshowContainer.addEventListener('mouseout', () => {
-  slideshowTimeout = setTimeout(() => showSlides(), 5000);
-});
+  slideshowContainer.addEventListener('mouseout', () => {
+    slideshowTimeout = setTimeout(() => showSlides(), 5000);
+  });
 
-document.addEventListener('DOMContentLoaded', () => showSlides(slideIndex));
+  showSlides(slideIndex);
+});
